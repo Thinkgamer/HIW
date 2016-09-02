@@ -33,10 +33,14 @@ def dict2obj(args):
 def get_all_file(path):
     client = connect()
     mess_list = []
+    if path=="/":
+        pass
+    else:
+        path=path+"/"
     child_list = client.list(path)
     for child in child_list:
         one_dic = client.status(path+child)
-        filepath = "/"+child
+        filepath = path+child
         one_dic["path"]=filepath
         dict2obj(one_dic)
         mess_list.append(dict2obj(one_dic))
