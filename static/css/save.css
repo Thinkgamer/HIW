@@ -4,7 +4,7 @@
 .dhfs_form{margin: 0 auto;}
 .hdfs_input{width: 90%; height: 25px;}
 .hdfs_button{width: 9%;font-size: 16px;height:30px;}
-.dhfs_show{background-color: #F5F6F6;height: 200px;}
+.dhfs_show{height: 200px;}
 /*table*/
 table {*border-collapse: collapse; /* IE7 and lower */border-spacing: 0;width: 100%;}
 .bordered {border: solid #ccc 1px;-moz-border-radius: 6px;-webkit-border-radius: 6px;border-radius: 6px;-webkit-box-shadow: 0 1px 1px #ccc;  -moz-box-shadow: 0 1px 1px #ccc;box-shadow: 0 1px 1px #ccc;}
