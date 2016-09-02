@@ -1,0 +1,29 @@
+{% extends "base.html"%}
+{% block title %}<title>广联达数据分析平台</title>{% endblock %}
+{% block js %}<script type="text/javascript" src="/static/js/index.js"></script>{% endblock %}
+
+{% block center%}
+<div class="service-list">
+    <div class="service-title"><p>为你的产品打造一套黄金甲</p></div>
+    <div style="margin-left: auto;margin-right: auto;width: 1250px;">
+        <div class="service-one left">
+            <div class="service-one-title">云平台资源统计</div>
+            <ul>
+                <li style="margin-top: 20px;"><a href="/resource/resource">云资源查看</a></li>
+            </ul>
+        </div>
+        <div class="service-one left">
+            <div class="service-one-title">云存储服务</div>
+            <ul>
+                <li style="margin-top: 20px;"><a href="/save/hdfsfile">HDFS存储</a></li>
+            </ul>
+        </div>
+        <div class="service-one left">
+            <div class="service-one-title">云计算服务</div>
+        </div>
+        <div class="service-one left">
+            <div class="service-one-title">业务解决方案</div>
+        </div>
+    </div>
+</div>
+{% endblock %}

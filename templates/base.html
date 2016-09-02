@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% block title %}{% endblock%}
+    <meta name="keywords" content="广联达大数据分析平台" />
+    <meta name="description" content="提供数据存储，数据ETL，数据分析，机器学习算法，数据可视化" />
+    {% block css %}{% endblock %}
+    <link href="/static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css">
+    {% block js %}<script type="text/javascript" src="/static/js/index.js"></script>{% endblock %}
+</head>
+<body>
+<div class="header">
+    <div class="log left"><a href="/index/index" style="color: #FFFFFF">Glodon</a></div>
+    <div class="old-in right" onmouseover="show_more('old-show')" onmouseleave="hidden_more('old-show')">
+        <div class="old-p" id="old-p"><span>原生版</span></div>
+        <div id="old-show">
+            <ul>
+                <a href="http://192.168.132.27:50070/" target="_blank"><li>HDFS</li></a>
+                <a href="http://192.168.132.27:8088" target="_blank"><li>Jobs/Logs</li></a>
+                <a href="http://192.168.132.27:9999/hwi" target="_blank"><li>Hive</li></a>
+                <li><a href="http://192.168.132.27:16010/"target="_blank">Hbase</a></li>
+                <li><a href="http://192.168.132.27:8080/"target="_blank">Spark</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="self-center right"><a href="">登录</a></div>
+</div>
+<div class="flase-header"></div>
+<!--只允许首页继承-->
+{% block center_index %}
+<div class="center">
+  <div class="center-left left">
+  <center>
+  <section id="rt-showcase-surround">
+    <div id="rt-showcase" class="slider-container rt-overlay-dark">
+        <div class="rt-container slider-container">
+            <div class="rt-grid-12 rt-alpha rt-omega">
+                <!--[if IE]><link rel="stylesheet" href="/static/css/ie.css"><![endif]-->
+                <!--[if lte IE 9]><script type="text/javascript" src="/static/js/ie.js"></script><![endif]-->
+                <div class="csslider1 autoplay">
+                    <input name="cs_anchor1" autocomplete="off" id="cs_slide1_0" type="radio" class="cs_anchor slide" >
+                    <input name="cs_anchor1" autocomplete="off" id="cs_slide1_1" type="radio" class="cs_anchor slide" >
+                    <input name="cs_anchor1" autocomplete="off" id="cs_slide1_2" type="radio" class="cs_anchor slide" >
+                    <input name="cs_anchor1" autocomplete="off" id="cs_play1" type="radio" class="cs_anchor" checked>
+                    <input name="cs_anchor1" autocomplete="off" id="cs_pause1" type="radio" class="cs_anchor" >
+                    <!--三张图片切换-->
+                    <ul>
+                        <div style="width: 100%; visibility: hidden; font-size: 0px; line-height: 0;">
+                            <img src="/static/img/1.jpg" style="width: 100%;" height="500px"/>
+                        </div>
+                        <li class="num0 img">
+                            <img src="/static/img/1.jpg" alt="Clouds" title="Clouds" height="500px" />
+                        </li>
+                        <li class="num1 img">
+                            <img src="/static/img/2.jpg" alt="Typewriter" title="Typewriter"  height="500px"/>
+                        </li>
+                        <li class="num2 img">
+                            <img src="/static/img/3.jpg" alt="Bicycle" title="Bicycle" height="500px" />
+                        </li>
+                    </ul>
+                    <!--图片描述-->
+                    <div class="cs_description">
+                        <label class="num0">
+                            <span class="cs_title"><span class="cs_wrapper">Clouds</span></span>
+                        </label>
+                        <label class="num1">
+                            <span class="cs_title"><span class="cs_wrapper">Typewriter</span></span>
+                        </label>
+                        <label class="num2">
+                            <span class="cs_title"><span class="cs_wrapper">Bicycle</span></span>
+                        </label>
+                    </div>
+                    <!--控制点击左右切换-->
+                    <div class="cs_arrowprev">
+                        <label class="num0" for="cs_slide1_0"></label>
+                        <label class="num1" for="cs_slide1_1"></label>
+                        <label class="num2" for="cs_slide1_2"></label>
+                    </div>
+                    <div class="cs_arrownext">
+                        <label class="num0" for="cs_slide1_0"></label>
+                        <label class="num1" for="cs_slide1_1"></label>
+                        <label class="num2" for="cs_slide1_2"></label>
+                    </div>
+                    <!--控制小图片查看-->
+                    <div class="cs_bullets">
+                        <label class="num0" for="cs_slide1_0">
+                            <span class="cs_point"></span>
+                            <span class="cs_thumb"><img src="/static/img/small/1.jpg" alt="Clouds" title="Clouds" /></span>
+                        </label>
+                        <label class="num1" for="cs_slide1_1">
+                            <span class="cs_point"></span>
+                            <span class="cs_thumb"><img src="/static/img/small/2.jpg" alt="Typewriter" title="Typewriter" /></span>
+                        </label>
+                        <label class="num2" for="cs_slide1_2">
+                            <span class="cs_point"></span>
+                            <span class="cs_thumb"><img src="/static/img/small/3.jpg" alt="Bicycle" title="Bicycle" /></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+  </section>        <!-- /slider -->
+  </center>
+
+  </div>
+  <div class="center-right right">
+      <div class="new_head">来自云端的公告</div>
+      <div class="new-list">
+          <ul><li style="margin-top: 20px;"><a href="">广联达大数据分析平台上线了</a></li>
+              <li><a href="">广联达大数据分析平台上线了</a></li>
+              <li><a href="">广联达大数据分析平台上线了</a></li>
+              <li><a href="">广联达大数据分析平台上线了</a></li>
+              <li><a href="">广联达大数据分析平台上线了</a></li>
+              <li><a href="">广联达大数据分析平台上线了</a></li>
+              <li><a href="">广联达大数据分析平台上线了</a></li>
+              <li><a href="">广联达大数据分析平台上线了</a></li></ul>
+      </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block center %}{% endblock %}
+
+<div class="footer1">
+    <div class="phone left"><br><img src="/static/img/foot-phone.gif" width="90" height="72"></div>
+    <div class="left">
+    <span>咨询电话：010-1000-1234&nbsp;&nbsp;|</span>
+    <span>云资源应有尽有&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+    <span>PB级数据存储&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+    <span>毫秒级计算与查询&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+    <span>精准的数据分析</span>
+    </div>
+</div>
+<div class="footer2">
+<footer2>
+    <hr style="border:1px #FFFFFF solid">
+    <p><span>
+      <a href="">关于我们 &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;</a>
+      <a href="">法律声明 &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;</a>
+      <a href="">廉政举报</a>
+    </span></p>
+    <hr style="border:1px #FFFFFF solid">
+    <p><span>
+      <a href="">友情链接 =》&nbsp;&nbsp;&nbsp;</a>
+      <a href="http://www.glodon.com/">Glodon官网 &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;</a>
+      <a href="http://192.168.130.181/">云测试平台 &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;</a>
+      <a href="http://192.168.130.184/">云资源管理平台&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;</a>
+      <a href="http://home.glodon.com:7781/bpm/index.jsp">统一登录门户 &nbsp;&nbsp;&nbsp;</a>
+    </span></p>
+    <p><span>Copyright 2016 by 广联达 研发资源服务中心&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;地址：北京市海淀区西北旺东路中关村软件园E13号广联达大厦 邮编：100193</span></p>
+</footer2>
+</div>
+</body>
+</html>

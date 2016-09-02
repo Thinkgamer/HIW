@@ -1,0 +1,30 @@
+{% extends "base.html "%}
+{% block title%}<title>广联达数据分析平台|云存储服务</title>{% endblock %}
+{% block css %}
+<link href="/static/css/save.css" rel="stylesheet">
+{% endblock %}
+{% block center_index%}{%endblock%}
+{% block center%}
+<div class="center_save">
+    <div class="title_hdfs">Browse Directory</div>
+    <hr style="border: 1px #EBEBEB solid;"><br>
+    <form action="" method="post" class="dhfs_form">
+        <input type="text" name="filepath" id="filepath" class="hdfs_input" >
+        <button class="hdfs_button"> GO！</button><br><br>
+        <div class="dhfs_show">
+            <table class="bordered">
+             <tr style="font-weight: bolder;font-size: 16px;">
+                 <td>Permission</td><td>Owner</td><td>Group</td><td>Replication</td><td>Length</td>
+                 <td>BlockSize</td><td>Type</td><td>ChildrenNum</td><td>FileId</td><td>Name</td>
+             </tr>
+            {% for mess in mess_list %}
+             <tr>
+                <td>{{mess.permission}}</td><td>{{mess.owner}}</td><td>{{mess.group}}</td><td>{{mess.replication}}</td><td>{{mess.length}}</td><td>{{mess.blockSize}}</td>
+                <td>{{mess.type}}</td><td>{{mess.childrenNum}}</td><td>{{mess.fileId}}</td><td>{{ mess.path }}</td>
+             </tr>
+            {%endfor %}
+             </table>
+        </div>
+    </form>
+</div>
+{% endblock %}
