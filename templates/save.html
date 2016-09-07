@@ -1,89 +1,30 @@
 {% extends "base.html "%}
-{% block title%}<title xmlns="http://www.w3.org/1999/html">广联达数据分析平台|云存储服务</title>{% endblock %}
+{% block title%}<title>广联达数据分析平台|云存储服务</title>{% endblock %}
 {% block css %}
 <link href="/static/css/save.css" rel="stylesheet">
-{% endblock %}
-{% block header %}
-{% if name %}
-    <div class="self-center right"><a>{{ name }}&nbsp;&nbsp;| &nbsp;&nbsp;</a><a href="/login/login" style="color: red">注销</a></div>
-{% else%}
-    <div class="self-center right"><a href="/login/login">登录</a></div>
-{% endif %}
 {% endblock %}
 {% block center_index%}{%endblock%}
 {% block center%}
 <div class="center_save">
     <div class="title_hdfs">Browse Directory</div>
     <hr style="border: 1px #EBEBEB solid;"><br>
-    <div class="dhfs_show">
-        <form action="/save/hdfsfile/{{name}}/" method="post" class="dhfs_form">
-            <input type="text" name="filepath" id="filepath" class="hdfs_input" placeholder="{{path_value}}" >
-            <button class="hdfs_button"> GO！</button><br><br>
-            {% if error %}<div class="show_error" style="color: red;margin-left: 10px;">Error：{{error}}</div>{% endif %}
-            {% if more %}<div class="show_error">【详情】当前路径：{{path_value}}<br>【包括】:</div>{% endif %}
-        </form>
-        <table class="bordered">
-            <tr style="font-weight: bolder;font-size: 16px;">
-                <td>Permission</td><td>Owner</td><td>Group</td><td>Replication</td><td>Length</td>
-                <td>BlockSize</td><td>Type</td><td>Children<br>Num</td><td>FileId</td><td>Name</td><td>Action</td>
-            </tr>
-            {% for mess in mess_list %}
-            <tr>
-                <td>{{mess.permission}}</td><td>{{mess.owner}}</td><td>{{mess.group}}</td><td>{{mess.replication}}</td><td>{{mess.length}}</td><td>{{mess.blockSize}}</td>
-                <td>{{mess.type}}</td><td>{{mess.childrenNum}}</td><td>{{mess.fileId}}</td><td><a href="/save/file/{{name}}/path={{ mess.path }}/">{{ mess.path }}</a></td>
-                <td><a href="/save/more/{{name}}/path={{ mess.path }}/">查看详情/其他操作</a></td>
-            </tr>
-            {%endfor %}
-        </table>
-        {% if root_more and not error %}
-        <div class="show_error">我要对目录【{{path_value}} 】 进行操作：
-            <a href="/save/more/{{name}}/path={{ path_value }}/" style="background-color: sandybrown">CLICK</a></div>
-        </div>
-        {% endif %}
-    </div>
-
-    <div class="dhfs_show">
-        {% if more %}
-        <div class="show_error">&nbsp;&nbsp;目录【{{path_value}} 】 的具体信息：</div>
-        <div class="more">
+    <form action="" method="post" class="dhfs_form">
+        <input type="text" name="filepath" id="filepath" class="hdfs_input" placeholder="{{path_value}}" >
+        <button class="hdfs_button"> GO！</button><br><br>
+        <div class="dhfs_show">
             <table class="bordered">
-                <tr style="font-weight: bolder;">
-                    {% for k,v in more_mess.items %}
-                    <td>{{ k }}</td>
-                    {% endfor %}
-                </tr>
-                <tr>
-                    {% for k,v in more_mess.items %}
-                    <td>{{ v }}</td>
-                    {% endfor %}
-                </tr>
-            </table>
-            <div class="show_error">&nbsp;&nbsp;目录【{{path_value}} 】 的具体操作:
-                <button class="more_button" style="margin-left: 20px;"><a href="/save/delete/{{name}}/path={{ path_value }}">删除</a></button>
-            </div>
-            <p></p>
+             <tr style="font-weight: bolder;font-size: 16px;">
+                 <td>Permission</td><td>Owner</td><td>Group</td><td>Replication</td><td>Length</td>
+                 <td>BlockSize</td><td>Type</td><td>ChildrenNum</td><td>FileId</td><td>Name</td>
+             </tr>
+            {% for mess in mess_list %}
+             <tr>
+                <td>{{mess.permission}}</td><td>{{mess.owner}}</td><td>{{mess.group}}</td><td>{{mess.replication}}</td><td>{{mess.length}}</td><td>{{mess.blockSize}}</td>
+                <td>{{mess.type}}</td><td>{{mess.childrenNum}}</td><td>{{mess.fileId}}</td><td>{{ mess.path }}</td>
+             </tr>
+            {%endfor %}
+             </table>
         </div>
-        <br>
-        <form action="/save/rename/{{name}}/path={{ path_value}}/" method="post">
-            <input type="text" name="rename" id="rename" class="more_input" placeholder="输入新的文件夹名字" >
-            <button class="more_button"> 重命名</button>
-        </form>
-        <br>
-        <form action="/save/mkdir/{{name}}/path={{ path_value }}/" method="post">
-            <input type="text" name="mkdir" id="mkdir" class="more_input" placeholder="输入新的子目录名字" >
-            <button class="more_button">创建</button>
-        </form>
-        <br>
-        <form action="/save/down/{{name}}/path={{ path_value }}/" method="post">
-            <input type="text" name="download" id="download" class="more_input" placeholder="输入下载路径" >
-            <button class="more_button"> 下载</button>
-        </form>
-        <br>
-        <form action="/save/upload/{{name}}/path={{ path_value }}/" method="post">
-            <input type="text" name="up" id="up" class="more_input" placeholder="输入上传文件路径" >
-            <button class="more_button"> 上传</button>
-        </form>
-        {% endif %}
-    </div>
+    </form>
 </div>
 {% endblock %}

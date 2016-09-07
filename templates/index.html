@@ -1,51 +1,28 @@
 {% extends "base.html"%}
 {% block title %}<title>广联达数据分析平台</title>{% endblock %}
 {% block js %}<script type="text/javascript" src="/static/js/index.js"></script>{% endblock %}
-{% block header %}
-{% if name %}
-    <div class="self-center right"><a>{{ name }}&nbsp;&nbsp;| &nbsp;&nbsp;</a><a href="/login/login" style="color: red">注销</a></div>
-{% else%}
-    <div class="self-center right"><a href="/login/login">登录</a></div>
-{% endif %}
-{% endblock %}
+
 {% block center%}
 <div class="service-list">
     <div class="service-title"><p>为你的产品打造一套黄金甲</p></div>
-    <div style="margin-left: 6%;width: 100%;">
+    <div style="margin-left: auto;margin-right: auto;width: 1250px;">
         <div class="service-one left">
             <div class="service-one-title">云平台资源统计</div>
             <ul>
-                <a href="/resource/nodemess/{{ name }}"><li>节点信息查看</li></a>
-                <a href="/resource/resource/{{ name }}"><li>云平台资源查看</li></a>
+                <li style="margin-top: 20px;"><a href="/resource/resource">云资源查看</a></li>
             </ul>
         </div>
         <div class="service-one left">
             <div class="service-one-title">云存储服务</div>
             <ul>
-                <a href="/save/hdfsfile/{{ name }}"><li>HDFS存储</li></a>
-                <a href=""><li>Hive数据仓库</li></a>
-                <a href=""><li>Hbase数据库</li></a>
-                <a href=""><li>Sqoop数据输送</li></a>
+                <li style="margin-top: 20px;"><a href="/save/hdfsfile">HDFS存储</a></li>
             </ul>
         </div>
         <div class="service-one left">
             <div class="service-one-title">云计算服务</div>
-            <ul>
-                <a href=""><li>MapReduce</li></a>
-                <a href=""><li>Spark</li></a>
-                <a href=""><li>Mahout</li></a>
-                <a href=""><li>Pig</li></a>
-            </ul>
         </div>
         <div class="service-one left">
             <div class="service-one-title">业务解决方案</div>
-            <ul>
-                <a href=""><li>数据存储方案</li></a>
-                <a href=""><li>实时处理方案</li></a>
-                <a href=""><li>用户征信解决方案</li></a>
-                <a href=""><li>产品维护方案</li></a>
-            </ul>
-            </ul>
         </div>
     </div>
 </div>

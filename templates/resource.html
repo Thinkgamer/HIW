@@ -1,32 +1,11 @@
 {% extends "base.html "%}
 {% block title%}<title>广联达数据分析平台|云资源管理</title>{% endblock %}
 {% block css %}
+<link rel="stylesheet" href="/static/css/style.css">
 <link href="/static/css/resource.css" rel="stylesheet">
-<link href="/static/css/save.css" rel="stylesheet">
-{% endblock %}
-{% block header %}
-{% if name %}
-    <div class="self-center right"><a>{{ name }}&nbsp;&nbsp;| &nbsp;&nbsp;</a><a href="/login/login" style="color: red">注销</a></div>
-{% else%}
-    <div class="self-center right"><a href="/login/login">登录</a></div>
-{% endif %}
+<link href="/static/css/index.css" rel="stylesheet">
 {% endblock %}
 {% block center_index%}{%endblock%}
 {% block center%}
-<div class="center_res">
-    <!--单个节点信息查看-->
-    {% if node_flag %}
-    <div class="title_node">平台节点信息查看</div>
-    <hr style="border: 1px #EBEBEB solid;"><br>
-    <table class="bordered">
-        <tr style="font-weight: bolder;font-size: 16px;"><td>IP地址</td><td>用户名</td><td>内存</td><td>硬盘</td><td>操作系统</td><td>描述</td></tr>
-        {% for node in node_list %}
-        <tr><td>{{node.ip}}</td><td>{{node.hostname}}</td><td>{{node.run_neicun}}</td><td>{{node.disk_neicun}}</td><td>{{node.os}}</td><td>{{node.desc}}</td></tr>
-        {%endfor %}
-    </table>
-    {% endif %}
-    <!--集群信息查看-->
-    {% if allmess_flag %}
-    {% endif %}
-</div>
+<div class="center_res"></div>
 {% endblock %}

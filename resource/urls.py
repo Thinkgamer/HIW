@@ -17,10 +17,8 @@ from django.conf.urls import url
 
 from resource.views import (
     resource,
-    nodemess,
 )
 
 urlpatterns = [
-    url(r'^resource/(\w+)/$', resource),
-    url(r'^nodemess/(\w+)/$', nodemess),
+    url(r'^resource/$', resource)
 ]
