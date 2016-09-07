@@ -21,5 +21,5 @@ from index.views import (
 )
 
 urlpatterns = [
-    url(r'^index/$', index)
+    url(r'^index/(\w+)/$', index)
 ]

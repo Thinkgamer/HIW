@@ -1,0 +1,23 @@
+{% extends "base.html"%}
+{% block title %}<title>欢迎使用广联达数据分析平台</title>{% endblock %}
+{% block center_index%} {% endblock %}
+{% block css %}<link href="/static/css/login.css"  rel="stylesheet">{% endblock %}
+{% block header %}<div class="self-center right"><a href="/login/login">请登录</a></div>{% endblock %}
+{% block center %}
+<div class="form_center">
+    <div class="form_css">
+        <form action="" method="post">
+        <p>欢迎使用广联达数据分析平台</p><br><br>
+        <div>
+            <label id="name" name="name">Name&nbsp;：</label>
+            <input class="input" type="text" name="name" data-options="required:true" value="" placeholder="输入你的广联达账号"/>
+        </div><br>
+        <div>
+            <label id="passwd" name="passwd">PWD&nbsp;&nbsp;：</label>
+            <input class="input" type="password" name="passwd" data-options="validType:'email'" value="" placeholder="输入对应的密码"/>
+        </div><br><br>
+         <button value="登录">登录</button>
+        </form>
+    </div>
+</div>
+{% endblock %}

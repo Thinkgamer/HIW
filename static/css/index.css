@@ -1,5 +1,5 @@
 * { margin: 0; padding: 0 }
-body { font: 12px "微软雅黑", Arial, Helvetica, sans-serif; color: #756F71;min-width: 1080px}
+body { font: 12px "微软雅黑", Arial, Helvetica, sans-serif; color: #756F71;min-width: 960px}
 img { border: 0; display: block }
 ul { list-style: none; }
 a:link, a:visited {text-decoration: none; color: black;}
@@ -9,8 +9,8 @@ a:link, a:visited {text-decoration: none; color: black;}
 .flase-header{width: 100%;height: 80px;}
 .header{width: 100%;height: 80px;background-color: #000000;position: fixed;z-index: 1;}
 .log{font-size: 40px;color: #FFFFFF;margin-left: 100px;line-height: 80px;}
-.self-center{margin-right: 80px;line-height: 80px;width: 100px;height: 80px;background-color: cornflowerblue;text-align: center}
-.self-center a{font-size:15px;color: #FFFFFF;}
+.self-center{margin-right: 80px;line-height: 80px;width: 150px;height: 80px;background-color: cornflowerblue;text-align: center}
+.self-center a{font-size:20px;color: #FFFFFF;}
 .old-in{color: #FFFFFF;font-size: 15px;width: 100px;height: 80px;}
 .old-p{width: 100px;height: 80px;}
 .old-p span{color: #ff6600;position: absolute;top:30px;right: 30px;}
@@ -19,7 +19,7 @@ a:link, a:visited {text-decoration: none; color: black;}
 #old-show ul{width: 100%;line-height: 60px;text-align: center;}
 #old-show ul li:hover{background-color: #ff6600;opacity:0.7;filter:alpha(opacity=70);}
 /*center*/
-.center{width: 100%;min-height: 520px;background-color: #737577}
+.center{width: 100%;min-height: 520px;margin: 0 auto;}
 /*center-left*/
 .center-left{width: 74%;height: 500px;margin-top: 10px;}
 /*center-right*/
@@ -38,7 +38,7 @@ a:link, a:visited {text-decoration: none; color: black;}
 /*service-list*/
 .service-list{width: 100%;height: 600px;background-color: #F5F6F6;}
 .service-title{width: 100%;height:100px;font-size: 25px;text-align: center;line-height: 100px;}
-.service-one{width: 300px;min-width:250px;height: 490px;background-color: #EBEBEB;border: 1px skyblue solid;
+.service-one{width: 21%;height: 490px;background-color: #EBEBEB;border: 1px skyblue solid;margin-top: 20px;
     -webkit-box-shadow: 1px 1px 2px rgba(28,183,253,0.4);
     -moz-box-shadow: 1px 1px 2px rgba(28,183,253,0.4);
     box-shadow: 1px 1px 2px rgba(28,183,253,0.4);
@@ -49,16 +49,19 @@ a:link, a:visited {text-decoration: none; color: black;}
     -o-transition: all 300ms linear;
     -ms-transition: all 300ms linear;
     transition: all 300ms linear;}
-.service-one:hover{width: 320px;z-index: 1;}
+.service-one:hover{width: 23%;height:530px;z-index: 1;margin-top: 0;background-color: antiquewhite}
 .service-one-title{width: 100%;height: 100px;background-color: deepskyblue;text-align: center;line-height: 100px;font-size: 25px;}
-.service-one ul {line-height: 30px;font-size: 20px;text-align: center}
+.service-one ul {font-size: 20px;text-align: center;}
+.service-one ul li{height: 50px;line-height: 50px;}
+.service-one ul li:hover{background-color: #1ABC9C}
 /*resource*/
 /*save*/
 
 
 /*footer*/
-.footer1{width: 100%;min-height:100px;background-color: #EBEBEB;}
+.footer1{width: 100%;min-height:100px;background-color: #EBEBEB;margin-top:50px;}
 .phone{margin-left: 100px;}
+.footer1 ul li{float:left}
 .footer1 span{font-size: 18px;line-height: 100px;margin-left: 10px;}
 .footer2{width: 100%;height:130px;font: 14px "微软雅黑", Arial, Helvetica, sans-serif;}
 footer2 {line-height:30px;height:130px;margin:0 auto;margin-left: 100px;}

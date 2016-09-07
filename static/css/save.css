@@ -1,15 +1,16 @@
 /*center*/
-.center_save{width: 90%;height: 500px;margin: 0 auto;}
+.center_save{width: 90%;margin: 0 auto;}
 .title_hdfs{height:100px;line-height: 100px;font-size: 30px;text-align: center;margin: 0 auto;}
 .dhfs_form{margin: 0 auto;}
 .hdfs_input{width: 90%; height: 25px;}
 .hdfs_button{width: 9%;font-size: 16px;height:30px;}
-.dhfs_show{height: 200px;}
+.dhfs_show{}
+.show_error{font-size: 25px;margin-bottom: 10px;margin-top: 10px;}
 /*table*/
 table {*border-collapse: collapse; /* IE7 and lower */border-spacing: 0;width: 100%;}
 .bordered {border: solid #ccc 1px;-moz-border-radius: 6px;-webkit-border-radius: 6px;border-radius: 6px;-webkit-box-shadow: 0 1px 1px #ccc;  -moz-box-shadow: 0 1px 1px #ccc;box-shadow: 0 1px 1px #ccc;}
 .bordered tr:hover {background: #fbf8e9;-o-transition: all 0.1s ease-in-out;-webkit-transition: all 0.1s ease-in-out;-moz-transition: all 0.1s ease-in-out;  -ms-transition: all 0.1s ease-in-out;transition: all 0.1s ease-in-out;}
-.bordered td, .bordered th { border-left: 1px solid #ccc;border-top: 1px solid #ccc;padding: 10px;text-align: left;}
+.bordered td, .bordered th { border-left: 1px solid #ccc;border-top: 1px solid #ccc;padding: 10px;text-align: left;font-size: 16px;}
 .bordered th {background-color: #dce9f9;
     background-image: -webkit-gradient(linear, left top, left bottom, from(#ebf3fc), to(#dce9f9));
     background-image: -webkit-linear-gradient(top, #ebf3fc, #dce9f9);
@@ -29,3 +30,7 @@ table {*border-collapse: collapse; /* IE7 and lower */border-spacing: 0;width: 1
 .bordered th:only-child{-moz-border-radius: 6px 6px 0 0;-webkit-border-radius: 6px 6px 0 0;border-radius: 6px 6px 0 0;  }
 .bordered tr:last-child td:first-child {-moz-border-radius: 0 0 0 6px;-webkit-border-radius: 0 0 0 6px;border-radius: 0 0 0 6px;  }
 .bordered tr:last-child td:last-child {-moz-border-radius: 0 0 6px 0;-webkit-border-radius: 0 0 6px 0;border-radius: 0 0 6px 0;}
+.bordered tr a:hover{color: springgreen;}
+.more{width: 100%;height: auto;}
+.more_input{width: 30%; height: 25px;margin-left: 20px;}
+.more_button{width: 5%;font-size: 16px;height:30px;}

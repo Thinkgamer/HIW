@@ -15,12 +15,7 @@ Including another URLconf
 """
 from django.conf.urls import url
 
-from resource.views import (
-    resource,
-    nodemess,
-)
-
+from login.views import login
 urlpatterns = [
-    url(r'^resource/(\w+)/$', resource),
-    url(r'^nodemess/(\w+)/$', nodemess),
+    url(r'^login/$', login)
 ]

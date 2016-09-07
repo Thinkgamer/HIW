@@ -12,7 +12,7 @@
 </head>
 <body>
 <div class="header">
-    <div class="log left"><a href="/index/index" style="color: #FFFFFF">Glodon</a></div>
+    <div class="log left"><a href="/index/index/{{name}}" style="color: #FFFFFF">Glodon</a></div>
     <div class="old-in right" onmouseover="show_more('old-show')" onmouseleave="hidden_more('old-show')">
         <div class="old-p" id="old-p"><span>原生版</span></div>
         <div id="old-show">
@@ -25,7 +25,7 @@
             </ul>
         </div>
     </div>
-    <div class="self-center right"><a href="">登录</a></div>
+    {% block header %}{% endblock %}
 </div>
 <div class="flase-header"></div>
 <!--只允许首页继承-->
@@ -128,11 +128,13 @@
 <div class="footer1">
     <div class="phone left"><br><img src="/static/img/foot-phone.gif" width="90" height="72"></div>
     <div class="left">
-    <span>咨询电话：010-1000-1234&nbsp;&nbsp;|</span>
-    <span>云资源应有尽有&nbsp;&nbsp;|&nbsp;&nbsp;</span>
-    <span>PB级数据存储&nbsp;&nbsp;|&nbsp;&nbsp;</span>
-    <span>毫秒级计算与查询&nbsp;&nbsp;|&nbsp;&nbsp;</span>
-    <span>精准的数据分析</span>
+        <ul>
+            <li><span>咨询电话：010-1000-1234&nbsp;&nbsp;|</span></li>
+            <li><span>云资源应有尽有&nbsp;&nbsp;|&nbsp;&nbsp;</span></li>
+            <li><span>PB级数据存储&nbsp;&nbsp;|&nbsp;&nbsp;</span></li>
+            <li><span>毫秒级计算与查询&nbsp;&nbsp;|&nbsp;&nbsp;</span></li>
+            <li><span>精准的数据分析</span></li>
+        </ul>
     </div>
 </div>
 <div class="footer2">
@@ -151,6 +153,7 @@
       <a href="http://192.168.130.184/">云资源管理平台&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;</a>
       <a href="http://home.glodon.com:7781/bpm/index.jsp">统一登录门户 &nbsp;&nbsp;&nbsp;</a>
     </span></p>
+    <br>
     <p><span>Copyright 2016 by 广联达 研发资源服务中心&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;地址：北京市海淀区西北旺东路中关村软件园E13号广联达大厦 邮编：100193</span></p>
 </footer2>
 </div>
