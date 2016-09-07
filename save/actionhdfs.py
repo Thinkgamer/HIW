@@ -15,7 +15,7 @@
 from hdfs import *
 # connect hdfs
 def connect():
-    client = Client("http://192.168.132.27:50070")
+    client = Client("http://192.168.132.28:50070")
     return client
 #将字典转化为类
 def dict2obj(args):
@@ -45,3 +45,32 @@ def get_all_file(path):
         dict2obj(one_dic)
         mess_list.append(dict2obj(one_dic))
     return mess_list
+
+#more
+def show_more(path):
+    client = connect()
+    return client.status(path)
+#delete
+def delete_path(path):
+    client = connect()
+    return client.delete(path,recursive=True)
+
+#makedirs
+def mkdir_path(path):
+    client = connect()
+    return client.makedirs(path)
+
+#重命名
+def rename_path(old_path,new_path):
+    client = connect()
+    return client.rename(old_path,new_path)
+
+#下载文件
+def down_file(hdfs_path,local_path):
+    client = connect()
+    return client.download(hdfs_path,local_path,overwrite=True)
+
+#下载文件
+def upload_file(hdfs_path,local_path):
+    client = connect()
+    return client.upload(hdfs_path,local_path,overwrite=True)

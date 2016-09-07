@@ -1,2 +1,5 @@
 /*center*/
-.center_res{width: 100%;height: 500px;background-color: aliceblue}
+.center_res{width: 90%;height: 500px;margin: 0 auto}
+/*nodemess*/
+.title_node{width: 100%;line-height: 100px;text-align: center;font-size: 30px;}
+.one_node{width: 300px;height: 400px;background-color: #dce9f9;margin-left: 20px;border: 1px #747778 solid;float: left;}

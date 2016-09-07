@@ -15,8 +15,15 @@ Including another URLconf
 """
 from django.conf.urls import url
 
-from save.views import hdfsfile
+from save.views import hdfsfile,more,file,delete,mkdir,rename,down,upload
 
 urlpatterns = [
-    url(r'^hdfsfile/$', hdfsfile)
+    url(r'^hdfsfile/(\w+)/$', hdfsfile),
+    url(r'^more/(\w+)/(.+)/$', more),
+    url(r'^file/(\w+)/(.+)/$', file),
+    url(r'^delete/(\w+)/(.+)/$', delete),
+    url(r'^mkdir/(\w+)/(.+)/$', mkdir),
+    url(r'^rename/(\w+)/(.+)/$', rename),
+    url(r'^down/(\w+)/(.+)/$', down),
+    url(r'^upload/(\w+)/(.+)/$', upload),
 ]
