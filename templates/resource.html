@@ -19,9 +19,9 @@
     <div class="title_node">平台节点信息查看</div>
     <hr style="border: 1px #EBEBEB solid;"><br>
     <table class="bordered">
-        <tr style="font-weight: bolder;font-size: 16px;"><td>IP地址</td><td>用户名</td><td>内存</td><td>硬盘</td><td>操作系统</td><td>描述</td></tr>
+        <tr style="font-weight: bolder;font-size: 16px;"><td>序号</td><td>IP地址</td><td>用户名</td><td>内存</td><td>硬盘</td><td>操作系统</td><td>描述</td></tr>
         {% for node in node_list %}
-        <tr><td>{{node.ip}}</td><td>{{node.hostname}}</td><td>{{node.run_neicun}}</td><td>{{node.disk_neicun}}</td><td>{{node.os}}</td><td>{{node.desc}}</td></tr>
+        <tr><td>{{ forloop.counter }}</td><td>{{node.ip}}</td><td>{{node.hostname}}</td><td>{{node.run_neicun}}</td><td>{{node.disk_neicun}}</td><td>{{node.os}}</td><td>{{node.desc}}</td></tr>
         {%endfor %}
     </table>
     {% endif %}

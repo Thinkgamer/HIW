@@ -15,7 +15,7 @@
 from hdfs import *
 # connect hdfs
 def connect():
-    client = Client("http://192.168.132.28:50070")
+    client = Client("http://192.168.132.27:50070")
     return client
 #将字典转化为类
 def dict2obj(args):
@@ -74,3 +74,11 @@ def down_file(hdfs_path,local_path):
 def upload_file(hdfs_path,local_path):
     client = connect()
     return client.upload(hdfs_path,local_path,overwrite=True)
+
+#login模块使用
+#在hdfs的根目录下创建一个当前用户的文件夹,如果存在则不创建
+def login_mkdir(name):
+    client = connect()
+    dict_list = client.list("/")
+    if name not in dict_list:
+        client.makedirs("/%s" % name)

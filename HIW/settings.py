@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'index',
     'resource',
     'save',
+    'jisuan',
 ]
 
 MIDDLEWARE_CLASSES = [

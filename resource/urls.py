@@ -18,9 +18,11 @@ from django.conf.urls import url
 from resource.views import (
     resource,
     nodemess,
+    test,
 )
 
 urlpatterns = [
     url(r'^resource/(\w+)/$', resource),
     url(r'^nodemess/(\w+)/$', nodemess),
+    url(r'^test/$', test),
 ]
