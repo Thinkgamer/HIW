@@ -70,7 +70,7 @@ def down_file(hdfs_path,local_path):
     client = connect()
     return client.download(hdfs_path,local_path,overwrite=True)
 
-#下载文件
+#上传文件
 def upload_file(hdfs_path,local_path):
     client = connect()
     return client.upload(hdfs_path,local_path,overwrite=True)

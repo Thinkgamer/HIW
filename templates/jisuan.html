@@ -13,8 +13,38 @@
 {% block center_index%}{%endblock%}
 {% block center%}
 <div class="jisuan_center">
-<form action="" method="post">
-    <input class="jisuan_input"> jar包上传
-</form>
+    <div class="title_mr">运行MapReduce</div><br>
+    <hr style="border: 1px #EBEBEB solid;"><br>
+    <div class="jsc_left left">
+        <form action="" method="post" class="jisuan_form">
+            <div class="jsc_one">
+                <span type="button">JAR包路径[HDFS]</span><br><br>
+                <input type="text" id="jar_path" name="jar_path" value="{{ jar_path }}">
+            </div><br>
+             <div class="jsc_one">
+                <span type="button">Main CLass Name</span><br><br>
+                <input type="text" id="main_class_name" name="main_class_name" value="{{ main_class_name }}">
+            </div><br>
+            <div class="jsc_one">
+                <span type="button">输入文件路径[HDFS]</span><br><br>
+                <input type="text" id="inputfile_path" name="inputfile_path" value="{{input_path}}">
+            </div><br>
+            <div class="jsc_one">
+                <span type="button">结果保存路径[HDFS]</span><br><br>
+                <input type="text" id="outputfile_path" name="outputfile_path" value="{{ output_path }}">
+            </div><br><br><br>
+            <div class="jsc_one">
+                <button style="margin-left: 30%;">提交运行</button>
+            </div>
+        </form>
+    </div>
+    <!--中间右边-->
+    <div class="jsc_right right">
+        <div class="jsc_r_title">MR运行结果</div>
+        <div>
+            <div class="jsc_r_one"><a href="http://127.0.0.1:8000/save/file/gyt/path={{ output_path }}">前往hdfs查看运行结果》》》</a></div>
+            <div class="jsc_r_one"><a href="http://192.168.132.28:50070/logs/" target="_blank">前往hdfs查看运行日志》》》</a></div>
+        </div>
+    </div>
 </div>
 {% endblock %}

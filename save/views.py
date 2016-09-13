@@ -123,7 +123,5 @@ def upload(request,username,path):
     upload_file(file_path,name)       #创建文件夹
     return file(request,username, path)
 
-
-#待增加功能=====================================================
-def read():
-    print("如果不是目录显示该文件内容")
+# def read(request,username,path):
+#     print("如果不是目录显示该文件内容")

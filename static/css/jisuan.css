@@ -1,2 +1,33 @@
-.jisuan_center{width: 90%;height: 500px;margin: 0 auto;margin-top:20px;background-color: #cccccc}
-.jisuan_input{width: 200px;height: 30px;}
+/*title*/
+.title_mr{width: 100%;text-align: center;font-size: 35px;}
+/*center*/
+.jisuan_center{width: 90%;height: 600px;margin: 0 auto;margin-top:20px;}
+/*left*/
+.jsc_left {width: 39.3%;height: 450px;border: 1px #cccccc solid;
+-webkit-box-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+    -moz-box-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+    box-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+    margin-right: 4px;
+    -webkit-transition: all 300ms linear;
+    -moz-transition: all 300ms linear;
+    -o-transition: all 300ms linear;
+    -ms-transition: all 300ms linear;
+    transition: all 300ms linear;}
+.jsc_one span{width: 30%;line-height: 30px;font-size: 20px;color: #1ABC9C}
+.jsc_one input{width: 99%;height: 30px;}
+.jsc_one button{width: 30%;height:34px;}
+
+/*right*/
+.jsc_right {width: 60%;min-height: 500px;border: 1px #1ABC9C solid;
+    -webkit-box-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+    -moz-box-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+    box-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+    margin-right: 4px;
+    -webkit-transition: all 300ms linear;
+    -moz-transition: all 300ms linear;
+    -o-transition: all 300ms linear;
+    -ms-transition: all 300ms linear;
+    transition: all 300ms linear;}
+.jsc_r_title{width: 100%;line-height: 40px;font-size: 30px;text-align: center;background-color: #1ABC9C}
+.jsc_r_one{width: 100%;line-height: 40px;font-size: 20px;text-align: center;background-color: linen;margin-top: 30px;}
+.jsc_r_one:hover{background-color: bisque}
