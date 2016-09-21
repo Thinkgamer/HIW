@@ -9,10 +9,10 @@ def mr(request,username):
         input_path = request.POST.get("inputfile_path")
         output_path =request.POST.get("outputfile_path")
         main_class = request.POST.get("main_class_name")
-        from jisuan.runjisuan import runmr
+        from mapreduce.runjisuan import runmr
         runmr(jar_path,input_path,output_path,main_class)
 
-        return render_to_response("jisuan.html", {
+        return render_to_response("mapreduce.html", {
             "name": username,
             "jar_path":jar_path,
             "input_path":input_path,
@@ -20,6 +20,6 @@ def mr(request,username):
             "main_class_name":main_class,
         })
     else:
-        return render_to_response("jisuan.html",{
+        return render_to_response("mapreduce.html",{
             "name":username,
         })

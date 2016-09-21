@@ -15,11 +15,11 @@ Including another URLconf
 """
 from django.conf.urls import url
 
-from jisuan.views import (
-    mr,
+from hive.views import (
+    phive,session,
 )
 
 urlpatterns = [
-    url(r'^mr/(\w+)/$', mr),
-
+    url(r'^phive/(\w+)/$', phive),
+    url(r'^session/(\w+)/(.+)/$',session),
 ]

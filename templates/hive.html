@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% block title%}<title>广联达数据分析平台|HIVE数据仓库</title>{% endblock %}
+{% block css %}
+<link href="/static/css/hive.css" rel="stylesheet">
+{% endblock %}
+{% block header %}
+{% if name %}
+    <div class="self-center right"><a>{{ name }}&nbsp;&nbsp;| &nbsp;&nbsp;</a><a href="/login/login" style="color: red">注销</a></div>
+{% else%}
+    <div class="self-center right"><a href="/login/login">登录</a></div>
+{% endif %}
+{% endblock %}
+{% block center_index%}{%endblock%}
+{% block center %}
+<div class="hive_center">
+    <div class="hive_title"><h1>HIVE SESSION</h1></div>
+    <hr style="border: 1px #EBEBEB solid;"><br>
+    <!--左半部分，显示曾经操作过的session-->
+    <div class="hive_left left bord">
+        <div class="hive_left_title"><span>历史提交事务</span></div>
+        <ul>
+            {% for sess in sess_list %}
+            <li><a href="/hive/session/{{ name}}/{{ sess}}">{{ sess }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+    <!--右半部分，显示具体的操作-->
+    <div class="hive_right right bord">
+        {% if sessionname %}
+        <div class="hive_left_title"><span>当前事务：{{ sessionname }}</span></div>
+        <form action="" method="post">
+            <p class="hive_right_p">输入你要执行的HQL：</p>
+            <textarea type="textarea" class="hive_left_sql bord" id="hql" name="hql">{{ text_sql }}</textarea>
+            <button type="submit" class="hive_rf_button" style="margin-left: 5%">Submit</button>
+            <span class="hive_right_back bord"><a href="/hive/phive/{{ name }}">退出该事务</a></span>
+            <input type="hidden" id="session" name="session" value="{{ sessionname }}" >
+        </form>
+        <div class="hive_left_relog bord">{{ result }}</div>
+        {% else %}
+        <form class="hive_right_form" action="" method="POST">
+            <div class="hive_rf_input">事务名：<input type="text" name="sessionname" id="sessionname" placeholder="plear input session name"></div><br/>
+            <button type="submit" class="hive_rf_button" style="margin-left: 100px;">Submit</button>
+        </form>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

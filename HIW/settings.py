@@ -41,8 +41,10 @@ INSTALLED_APPS = [
     'index',
     'resource',
     'save',
-    'jisuan',
+    'mapreduce',
+    'hive',
 ]
+
 
 MIDDLEWARE_CLASSES = [
     'django.middleware.security.SecurityMiddleware',
