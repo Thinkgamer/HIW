@@ -16,7 +16,7 @@ VM+CentOS+hadoop2.7搭建hadoop完全分布式集群<br />
 <a href="http://blog.csdn.net/gamer_gyt/article/details/51991893">http://blog.csdn.net/gamer_gyt/article/details/51991893</a><br />
 基于hadoop集群的Hive1.2.1、Hbase1.2.2、Zookeeper3.4.8完全分布式安装<br />
 <a href="http://blog.csdn.net/gamer_gyt/article/details/52032579">http://blog.csdn.net/gamer_gyt/article/details/52032579</a><br />
-基于hadoop2.7集群的Spark2.0，Sqoop1.4.6，Mahout0.12.2完全分布式安装
+基于hadoop2.7集群的Spark2.0，Sqoop1.4.6，Mahout0.12.2完全分布式安装<br />
 <a href="http://blog.csdn.net/gamer_gyt/article/details/52045663">http://blog.csdn.net/gamer_gyt/article/details/52045663</a><br />
-三台PC服务器部署Hadoop HA（Hadoop 高可用性架构）
+三台PC服务器部署Hadoop HA（Hadoop 高可用性架构）<br />
 <a href="http://blog.csdn.net/gamer_gyt/article/details/52350528">http://blog.csdn.net/gamer_gyt/article/details/52350528</a><br />
