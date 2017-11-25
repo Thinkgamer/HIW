@@ -1,7 +1,7 @@
 # HIW
-基于Django和Hadoop集群进行的大数据分析平台
-登录用户名/密码：thinkgamer/123456
-后台登录用户名/密码：thinkgamer/thinkgamer
+基于Django和Hadoop集群进行的大数据分析平台<br/>
+登录用户名/密码：thinkgamer/123456<br/>
+后台登录用户名/密码：thinkgamer/thinkgamer<br/>
 
 # 基本环境
 - python3.4<br/>
