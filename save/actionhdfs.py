@@ -15,7 +15,7 @@
 from hdfs import *
 # connect hdfs
 def connect():
-    client = Client("http://192.168.132.27:50070")
+    client = Client("http://192.168.1.105:50070")
     return client
 #将字典转化为类
 def dict2obj(args):

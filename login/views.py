@@ -10,9 +10,9 @@ def login(request):
     if request.method=="POST":
         name = request.POST.get("name")
         passwd = request.POST.get("passwd")
-        if name=="gyt" and passwd == "gyt":
+        if name=="thinkgamer" and passwd == "123456":
             #给当前用户在hdfs下创建一个文件夹
-            login_mkdir(name)
+            # login_mkdir(name)
             return HttpResponseRedirect("/index/index/%s" % name)
     else:
         return render_to_response("login.html",{
